@@ -28,7 +28,7 @@ export default function Home() {
         <div className="flex-1 bg-brand-warm flex items-center justify-center overflow-hidden h-[300px] md:h-auto">
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-tr from-[#3D2513] to-brand-warm text-white/20 text-[14px] italic relative">
             <img 
-              src="/hero-table.jpg" 
+              src="Images without bg/2.png" 
               alt="Premium Resin River Table" 
               className="absolute inset-0 w-full h-full object-cover opacity-80"
               onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1605337222168-52fb94711319?q=80&w=2670&auto=format&fit=crop'; }}

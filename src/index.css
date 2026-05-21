@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-deep: #2C1A0E;
+  --color-brand-warm: #5C3317;
+  --color-brand-amber: #C07830;
+  --color-brand-gold: #B8972A;
+  --color-brand-gold-light: #D4AF5A;
+  --color-brand-cream: #F5EFE6;
+  --color-brand-offwhite: #FAF7F2;
+  --color-brand-teal: #1A7B7B;
+  --color-brand-charcoal: #1C1C1C;
+
+  --font-serif: Georgia, serif;
+  --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+html, body {
+  background-color: var(--color-brand-offwhite);
+  color: var(--color-brand-deep);
+  font-family: var(--font-sans);
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-serif);
+}
+
+.text-brand-deep { color: var(--color-brand-deep); }
+.text-brand-warm { color: var(--color-brand-warm); }
+.text-brand-amber { color: var(--color-brand-amber); }
+.text-brand-gold { color: var(--color-brand-gold); }
+.text-brand-gold-light { color: var(--color-brand-gold-light); }
+.text-brand-teal { color: var(--color-brand-teal); }
+.text-brand-charcoal { color: var(--color-brand-charcoal); }
+
+.bg-brand-deep { background-color: var(--color-brand-deep); }
+.bg-brand-warm { background-color: var(--color-brand-warm); }
+.bg-brand-amber { background-color: var(--color-brand-amber); }
+.bg-brand-gold { background-color: var(--color-brand-gold); }
+.bg-brand-gold-light { background-color: var(--color-brand-gold-light); }
+.bg-brand-cream { background-color: var(--color-brand-cream); }
+.bg-brand-offwhite { background-color: var(--color-brand-offwhite); }
+.bg-brand-teal { background-color: var(--color-brand-teal); }
+.bg-brand-charcoal { background-color: var(--color-brand-charcoal); }
+
+.border-brand-gold { border-color: var(--color-brand-gold); }
+.border-brand-deep { border-color: var(--color-brand-deep); }

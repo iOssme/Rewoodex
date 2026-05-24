@@ -28,7 +28,7 @@ export default function Home() {
         <div className="flex-1 bg-brand-warm flex items-center justify-center overflow-hidden h-[300px] md:h-auto">
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-tr from-[#3D2513] to-brand-warm text-white/20 text-[14px] italic relative">
             <img 
-              src="Images without bg/2.png" 
+              src="/hero-table.jpg" 
               alt="Premium Resin River Table" 
               className="absolute inset-0 w-full h-full object-cover opacity-80"
               onError={(e) => { e.currentTarget.src = 'https://images.unsplash.com/photo-1605337222168-52fb94711319?q=80&w=2670&auto=format&fit=crop'; }}
@@ -90,21 +90,21 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Mosaic logic */}
           <div className="relative aspect-square group overflow-hidden md:col-span-2 lg:col-span-2 lg:row-span-2">
-            <img src="https://images.unsplash.com/photo-1533090368676-1fd25485db88?q=80&w=2669&auto=format&fit=crop" loading="lazy" alt="Olive Wood Coffee Table" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://raw.githubusercontent.com/iOssme/Rewoodex/main/src/pages/Images/1.jpg" loading="lazy" alt="Olive Wood Coffee Table" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-brand-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
               <span className="text-brand-gold text-xs uppercase tracking-widest mb-2">Olive Wood & Teal Resin</span>
               <h3 className="font-serif text-2xl text-white">The Mediterranean Edge</h3>
             </div>
           </div>
           <div className="relative aspect-square md:aspect-auto md:h-full lg:aspect-square group overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=2730&auto=format&fit=crop" loading="lazy" alt="Walnut Wall Mirror" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://raw.githubusercontent.com/iOssme/Rewoodex/main/src/pages/Images/8.jpg" loading="lazy" alt="Walnut Wall Mirror" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-brand-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
               <span className="text-brand-gold text-xs uppercase tracking-widest mb-2">Walnut & Clear Resin</span>
               <h3 className="font-serif text-xl text-white">Eternity Mirror</h3>
             </div>
           </div>
           <div className="relative aspect-square md:aspect-auto md:h-full lg:aspect-square group overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1582236371754-5d55b8be3bd5?q=80&w=2574&auto=format&fit=crop" loading="lazy" alt="Resin Wall Clock" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+            <img src="https://raw.githubusercontent.com/iOssme/Rewoodex/main/src/pages/Images/7.jpg" loading="lazy" alt="Resin Wall Clock" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-brand-charcoal/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
               <span className="text-brand-gold text-xs uppercase tracking-widest mb-2">Oak & Onyx Resin</span>
               <h3 className="font-serif text-xl text-white">Midnight Tracker</h3>

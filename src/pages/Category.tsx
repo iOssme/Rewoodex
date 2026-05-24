@@ -3,50 +3,11 @@ import { Link } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
 import { Trees, Droplet, Paintbrush, Hammer, ChevronRight, CheckCircle2 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { CATEGORY_DATA } from '../data/products';
 
 interface CategoryProps {
   type: 'tables' | 'mirrors' | 'clocks';
 }
-
-const CATEGORY_DATA = {
-  tables: {
-    title: 'Tables',
-    description: 'Bespoke dining, coffee, and console tables. Our signature river designs combining natural grain and fluid geometry.',
-    heroImage: 'https://images.unsplash.com/photo-1577140917170-285929fb55b7?q=80&w=2670&auto=format&fit=crop',
-    filters: ['All', 'Dining', 'Coffee', 'Side & Console', 'Bar & Kitchen'],
-    products: [
-      { id: '1', category: 'Coffee Table', name: 'Nile Current', priceStart: 850, tags: ['Olive Wood', 'Teal Resin'], imageUrl: 'https://images.unsplash.com/photo-1533090368676-1fd25485db88?q=80&w=2669&auto=format&fit=crop', description: 'A breathtaking coffee table capturing the spirit of the Nile.' },
-      { id: '2', category: 'Dining Table', name: 'Midnight Onyx', priceStart: 2400, tags: ['Walnut', 'Black Resin'], imageUrl: 'https://images.unsplash.com/photo-1604578762246-41134e37f9cc?q=80&w=2576&auto=format&fit=crop', description: 'Grand dining table seating eight, with a deep black river center.' },
-      { id: '3', category: 'Side & Console', name: 'Desert Mirage', priceStart: 600, tags: ['Oak', 'Clear Resin'], imageUrl: 'https://images.unsplash.com/photo-1532372576067-17eb481fb2e3?q=80&w=2674&auto=format&fit=crop', description: 'Minimalist console with subtle resin infills preserving the natural edge.' },
-      { id: '4', category: 'Dining Table', name: 'Golden Hour', priceStart: 2800, tags: ['Ash Wood', 'Amber Resin'], imageUrl: 'https://images.unsplash.com/photo-1611269154421-4e27233ac5c7?q=80&w=2565&auto=format&fit=crop', description: 'Warm amber tones create a glowing centerpiece for your dining room.' },
-      { id: '5', category: 'Coffee Table', name: 'Arctic Flow', priceStart: 950, tags: ['Maple', 'White Resin'], imageUrl: 'https://images.unsplash.com/photo-1565706596131-7e7e399589a1?q=80&w=2609&auto=format&fit=crop', description: 'Crisp white resin meets pale maple for a modern, airy aesthetic.' },
-      { id: '6', category: 'Bar & Kitchen', name: 'Industrial Edge', priceStart: 1200, tags: ['Walnut', 'Steel Legs'], imageUrl: 'https://images.unsplash.com/photo-1551298370-9d3d53740c72?q=80&w=2574&auto=format&fit=crop', description: 'High bar table marrying raw wood elements with industrial structural legs.' },
-    ]
-  },
-  mirrors: {
-    title: 'Mirrors',
-    description: 'Reflect your space through a frame of natural beauty. From striking floor mirrors to intricate wall pieces.',
-    heroImage: 'https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=2670&auto=format&fit=crop',
-    filters: [],
-    products: [
-      { id: 'm1', category: 'Wall Mirror', name: 'The Arch', priceStart: 450, tags: ['Oak'], imageUrl: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?q=80&w=2730&auto=format&fit=crop', description: 'Classic arch frame with a slender, sophisticated resin border.' },
-      { id: 'm2', category: 'Floor Mirror', name: 'Grand Reflection', priceStart: 890, tags: ['Walnut', 'Clear Resin'], imageUrl: 'https://images.unsplash.com/photo-1617104443194-d419fba85fdf?q=80&w=2574&auto=format&fit=crop', description: 'A massive leaning floor mirror, adding dramatic depth to any room.' },
-      { id: 'm3', category: 'Decorative', name: 'Eclipse', priceStart: 350, tags: ['Olive Wood', 'Round'], imageUrl: 'https://images.unsplash.com/photo-1602028682029-79878dc44f0b?q=80&w=2670&auto=format&fit=crop', description: 'Circular mirror encased perfectly in an asymmetrical live edge.' },
-      { id: 'm4', category: 'Wall Mirror', name: 'Coastal Frame', priceStart: 400, tags: ['Driftwood', 'Blue Resin'], imageUrl: 'https://images.unsplash.com/photo-1605337222168-52fb94711319?q=80&w=2670&auto=format&fit=crop', description: 'Inspired by the Red Sea, blending sandy tones with oceanic blue.' },
-    ]
-  },
-  clocks: {
-    title: 'Clocks',
-    description: 'Time measured in rings of growth. Unique wall clocks that double as captivating resin art installations.',
-    heroImage: 'https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?q=80&w=2670&auto=format&fit=crop',
-    filters: [],
-    products: [
-      { id: 'c1', category: 'Wall Clock', name: 'Infinity Circle', priceStart: 250, tags: ['Walnut', 'Silent Sweep'], imageUrl: 'https://images.unsplash.com/photo-1582236371754-5d55b8be3bd5?q=80&w=2574&auto=format&fit=crop', description: 'A dark, brooding piece with gold-leaf embedded into deep resin.' },
-      { id: 'c2', category: 'Wall Clock', name: 'Geode Time', priceStart: 320, tags: ['Olive Wood', 'Amethyst Resin'], imageUrl: 'https://images.unsplash.com/photo-1615873968403-89e068629265?q=80&w=2832&auto=format&fit=crop', description: 'Features a center core that mimics a cracked crystal geode.' },
-      { id: 'c3', category: 'Large Clock', name: 'The Studio', priceStart: 400, tags: ['Oak', 'Minimalist'], imageUrl: 'https://images.unsplash.com/photo-1506456181678-795b95a43878?q=80&w=2676&auto=format&fit=crop', description: 'An oversized, minimalist clock face allowing the wood grain to speak.' },
-    ]
-  }
-};
 
 export default function Category({ type }: CategoryProps) {
   const data = CATEGORY_DATA[type];

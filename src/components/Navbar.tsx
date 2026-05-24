@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ChevronDown, ShoppingBag } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useCart } from '../context/CartContext';
+import SearchBar from './SearchBar';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,6 +71,10 @@ export default function Navbar() {
               Contact
             </Link>
 
+            <div className="ml-2 font-light">
+              <SearchBar />
+            </div>
+
             <Link to="/cart" className="relative ml-2 text-brand-deep hover:text-brand-amber transition-colors">
               <ShoppingBag className="w-5 h-5" />
               {cartCount > 0 && (
@@ -111,6 +116,9 @@ export default function Navbar() {
             className="md:hidden bg-brand-offwhite border-b border-brand-warm/10 overflow-hidden absolute top-full left-0 right-0 z-40 shadow-lg"
           >
             <div className="px-4 pt-2 pb-6 space-y-1">
+              <div className="pb-4 pt-1 px-3 border-b border-brand-warm/10">
+                <SearchBar />
+              </div>
               <Link
                 to="/"
                 onClick={() => setIsOpen(false)}
